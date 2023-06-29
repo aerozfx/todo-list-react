@@ -32,15 +32,21 @@ function App() {
   }
   return (
     <>
-    <form className='form' onSubmit={handleSubmit}>
-      <input type="text" name='todo' onInput={handleInput}/>
-      {todo ? <button>ADD</button> : <button disabled>ADD</button>}
-      
-    </form>
+    <header>
+      <h1>TODO LIST</h1>
+    </header>
+    <main>
+      <form className='form' onSubmit={handleSubmit}>
+        <input type="text" name='todo' onInput={handleInput}/>
+        {todo ? <button className='btn add-todo'>ADD</button> : <button disabled className='btn add-todo'>ADD</button>}
+        
+      </form>
       <List items={items} updateItems={updateItems}/>
-            <button className='delete-all' onClick={deleteAll}>{<BsTrashFill />}</button>
-            <button className='delete-all' onClick={resetTodos}>{<GrPowerReset />}</button>
-
+      <section className='buttons'>
+        <button className='btn delete-all' onClick={deleteAll}>{<BsTrashFill />}</button>
+        <button className='btn reset-all' onClick={resetTodos}>{<GrPowerReset />}</button>
+      </section>
+    </main>
     </>
   )
 }
