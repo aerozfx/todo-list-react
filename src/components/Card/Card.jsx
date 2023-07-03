@@ -5,7 +5,7 @@ const Card = ({text, deleteOneItem}) => {
   return (    
     <div className="item">
       <p>{text}</p>
-      <button onClick={deleteOneItem}>{<BsTrashFill />}</button>
+      <button onClick={deleteOneItem} className="btn delete-one">{<BsTrashFill />}</button>
     </div>)
 };
 
