@@ -5,21 +5,75 @@
 }
 
 #root {
-  max-width: 1280px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   text-align: center;
+  height: 100vh;
 }
-
-.form {
+main {
+  width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  gap: 30px;
+}
+.form {
+  width: inherit;
+  display: flex;
+  justify-content: center;
   gap: 10px;
 }
 .form input {
-  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  flex-grow: 1;
+  padding: 10px 15px;
 }
-.form button {
-  border: 1px solid black;
+
+.btn {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.add-todo {
+  border: 1px solid lightgray;
+}
+
+.buttons {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.delete-all,
+.reset-all {
+  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete-all {
+  background-color: #d83f31;
+  color: white;
+}
+.reset-all {
+  background-color: #9ee493;
+}
+
+.error {
+  color: #d83f31;
+  font-weight: 700;
 }
